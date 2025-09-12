@@ -3,13 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Messages</title>
+  <title><%= title %></title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <div class="root">
-    <h1>Messages</h1>
-    <%= JSON.stringify(messages) %>
+    <h1><%= title %></h1>
+    <div class="buttons">
+      <a href="/new">+ New</a>
+    </div>
+    <div class="messages">
+      <% for (const message of messages){ %>
+        <%- include("messageItem", message); %>
+      <% } %>
+    </div>
   </div>
 </body>
 </html>
