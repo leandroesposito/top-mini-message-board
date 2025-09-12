@@ -14,7 +14,10 @@
     </div>
     <div class="messages">
       <% for (const message of messages){ %>
-        <%- include("messageItem", message); %>
+        <div class="message-container">
+          <%- include("messageItem", message); %>
+          <a href="<%= `/message/${message.id}` %>" class="button">Open</a>
+        </div>
       <% } %>
     </div>
   </div>
