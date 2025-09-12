@@ -5,7 +5,7 @@ const { randomUUID } = require("node:crypto");
 const newRouter = Router();
 
 newRouter.get("/", (req, res) => {
-  res.render("new");
+  res.render("new", { title: "New Message" });
 });
 
 newRouter.post("/", (req, res) => {
