@@ -1,3 +1,107 @@
+:root {
+  --color-1: #3d348b;
+  --color-2: #7678ed;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  background-color: var(--color-1);
+}
+
 h1 {
-  color: red;
+  margin: 0;
+}
+
+.root {
+  border: 2px solid white;
+  padding: 2rem;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.button,
+button {
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  display: inline-block;
+  background-color: var(--color-2);
+  color: black;
+  text-align: center;
+}
+
+.index .buttons {
+  display: flex;
+  justify-content: end;
+}
+
+.messages {
+  display: grid;
+  gap: 2rem;
+}
+
+.message-container,
+.message-details .message,
+form {
+  background-color: var(--color-2);
+  padding: 0.5rem;
+  border: 2px solid white;
+  border-radius: 1rem;
+  color: black;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.message {
+  display: grid;
+  grid-template-areas:
+    "user text"
+    "added added";
+  justify-content: start;
+  gap: 0.5rem;
+}
+
+.message .user {
+  grid-area: user;
+}
+.message .user::after {
+  content: ":";
+}
+
+.message .text {
+  grid-area: text;
+}
+.message .added {
+  grid-area: added;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-row {
+  display: flex;
+}
+
+label {
+  width: 3rem;
+}
+
+input {
+  background-color: var(--color-2);
+  color: black;
+  border: 2px solid white;
 }
