@@ -3,13 +3,13 @@ const { randomUUID } = require("node:crypto");
 const messages = [
   {
     text: "Hi there!",
-    user: "Amando",
+    username: "Amando",
     added: new Date(),
     id: randomUUID(),
   },
   {
     text: "Hello World!",
-    user: "Charles",
+    username: "Charles",
     added: new Date(),
     id: randomUUID(),
   },
