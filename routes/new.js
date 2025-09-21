@@ -1,22 +1,9 @@
 const { Router } = require("express");
-const messages = require("../messages");
-const { randomUUID } = require("node:crypto");
-
+const newController = require("../controllers/new");
 const newRouter = Router();
 
-newRouter.get("/", (req, res) => {
-  res.render("new", { title: "New Message" });
-});
+newRouter.get("/", newController.newGet);
 
-newRouter.post("/", (req, res) => {
-  const { user, text } = req.body;
-  messages.push({
-    user,
-    text,
-    added: new Date(),
-    id: randomUUID(),
-  });
-  res.redirect("/");
-});
+newRouter.post("/", newController.newPost);
 
 module.exports = newRouter;
