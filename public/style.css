@@ -105,3 +105,8 @@ input {
   color: black;
   border: 2px solid white;
 }
+
+.error {
+  border-bottom: 2px solid red;
+  margin: 1rem 0;
+}
